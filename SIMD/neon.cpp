@@ -36,7 +36,7 @@ int main()
         for (int i = k + 1; i < N; i++)
         {
             float32x4_t vaik = vmovq_n_f32(m[i][k]);
-            for (j = k + 1; j+4 <= N; j+=4)
+            for (j = k + 1; j + 4 <= N; j += 4)
             {
                 float32x4_t vakj = vld1q_f32(&(m[k][j]));
                 float32x4_t vaij = vld1q_f32(&(m[i][j]));
